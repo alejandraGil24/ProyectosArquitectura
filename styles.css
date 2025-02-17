@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 550vh;
+  font-family: "Gilroy";
+  overflow: hidden;
+}
+
+img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*will-change: transform;
+  transform: translateX(0) scale(1);*/
+
+section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding: 1.5em;
+  overflow: hidden;
+}
+
+section.outro {
+  height: 50vh;
+  padding: 1.5em;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+section.inicio {
+  background-color: rgb(235, 224, 214);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.inicio h1 {
+  color: black;
+  font-size: 50px;
+  font-weight: 500;
+  letter-spacing: -2px;
+  line-height: 0.9;
+}
+.inicio h2 {
+  position: absolute;
+  color: black;
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 0.9;
+  margin-top: 14vh;
+}
+
+.outro h1 {
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: -2px;
+  line-height: 0.9;
+}
+
+section.sticky {
+  background-color: #b4aea7;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slides {
+  position: relative;
+  width: 500%;
+  height: 100%;
+  display: flex;
+}
+
+.slide {
+  position: relative;
+  flex: 1;
+  height: 100%;
+}
+
+.img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth[data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
