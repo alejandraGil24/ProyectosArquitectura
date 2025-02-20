@@ -19,9 +19,6 @@ img {
   object-fit: cover;
 }
 
-/*will-change: transform;
-  transform: translateX(0) scale(1);*/
-
 section {
   position: relative;
   width: 100vw;
@@ -114,4 +111,41 @@ section.sticky {
 
 .lenis.lenis-smooth iframe {
   pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  html,
+  body {
+    height: auto;
+    overflow: auto;
+  }
+
+  section {
+    padding: 1em;
+  }
+
+  .inicio h1 {
+    font-size: 35px;
+  }
+
+  .inicio h2 {
+    font-size: 20px;
+    margin-top: 10vh;
+  }
+
+  .outro h1 {
+    font-size: 20px;
+  }
+
+  .slides {
+    width: 100%;
+  }
+
+  .slide {
+    flex: 1 0 100%;
+  }
+
+  .img {
+    height: auto;
+  }
 }

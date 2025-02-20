@@ -59,4 +59,29 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     },
   });
+
+  function isTouchDevice() {
+    return "ontouchstart" in window || navigator.maxTouchPoints;
+  }
+
+  if (isTouchDevice()) {
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    slider.addEventListener("touchstart", (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+
+    slider.addEventListener("touchend", (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleGesture();
+    });
+
+    function handleGesture() {
+      const touchMove = touchStartX - touchEndX;
+      const moveAmount = (touchMove / window.innerWidth) * totalMove;
+
+      gsap.to(slidesContainer, { x: `+=${moveAmount}` });
+    }
+  }
 });
